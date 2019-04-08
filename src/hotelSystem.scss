@@ -85,12 +85,3 @@ $hotelSystem: mat-light-theme($primary, $accent, $hotelSystem-warn);
 @include sidenav-list-component-theme($hotelSystem);
 
 @include header-component-theme($hotelSystem);
-
-//footer
-footer{
-    background-color: mat-color($primary,500);
-}
-
-.route{
-    color: mat-color($accent);
-}
