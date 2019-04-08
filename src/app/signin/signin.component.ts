@@ -34,7 +34,6 @@ export class SigninComponent implements OnInit {
   backClicked() {
     window.history.back();
   }
-
 }
 
 

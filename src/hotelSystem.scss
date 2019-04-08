@@ -76,6 +76,7 @@ $hotelSystem: mat-light-theme($primary, $accent, $hotelSystem-warn);
 @import './app/navigation/navtabs/navtabs.component-theme.scss';
 @import './app/navigation/sidenav-list/sidenav-list.component-theme.scss';
 @import './app/navigation/header/header.component-theme.scss';
+@import './app/footer/footer.component-theme.scss';
 
 @include angular-material-theme($hotelSystem);
 
@@ -85,3 +86,5 @@ $hotelSystem: mat-light-theme($primary, $accent, $hotelSystem-warn);
 @include sidenav-list-component-theme($hotelSystem);
 
 @include header-component-theme($hotelSystem);
+
+@include footer-component-theme($hotelSystem);

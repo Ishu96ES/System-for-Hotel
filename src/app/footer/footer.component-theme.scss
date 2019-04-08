@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+
+@mixin  footer-component-theme($hotelSystem){
+
+
+    $primary : map-get($hotelSystem,primary);
+    $accent : map-get($hotelSystem,accent);
+
+   //footer
+    footer{
+        background-color: mat-color($primary,500);
+    }
+
+    .route{
+        color: mat-color($accent);
+    }   
+   
+}

@@ -9,6 +9,11 @@
     .header-container{
         background-color: mat-color($primary);
     }
+
+    .btn{
+        color: white;
+        background-color: mat-color($accent);
+    }
     
    
 }

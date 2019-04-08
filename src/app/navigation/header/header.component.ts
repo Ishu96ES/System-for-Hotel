@@ -1,17 +1,13 @@
 import { Component, OnInit  } from '@angular/core';
-import { MatDialog,MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { SigninComponent } from 'src/app/signin/signin.component';
 import { HeaderService } from './header.service';
 
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css','./header.component-theme.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  private dialog : MatDialog
 
   constructor(public header:HeaderService) { }
 
