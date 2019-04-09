@@ -39,6 +39,8 @@ import { Router, NavigationStart } from '@angular/router';
 import { NavtabsService } from './navigation/navtabs/navtabs.service';
 import { HeaderService } from './navigation/header/header.service';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.component';
+import { LoginHeaderComponent } from './navigation/login-header/login-header.component';
 
 
 @NgModule({
@@ -65,7 +67,8 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     SignupComponent,
     ForgetpasswordComponent,
     VerifyemailComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginHeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@
         <app-sidenav-list (closeSideNavigation)="sidenav.close()"></app-sidenav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <app-header *ngIf="!signin" (SideNavigationToggle)="sidenav.toggle()"></app-header>
+        <app-header></app-header>
         <app-navtabs></app-navtabs>
         <main>
             <router-outlet> </router-outlet>
