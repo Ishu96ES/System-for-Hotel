@@ -15,12 +15,10 @@ import { ForgetpasswordComponent } from '../user/forgetpassword/forgetpassword.c
 export class SigninComponent implements OnInit {
   
 
-  constructor(public nav:NavtabsService,public dialog:MatDialog,public authService: AuthService,public footer:FooterService,public header:HeaderService) { }
+  constructor(public dialog:MatDialog,public authService: AuthService) { }
 
   ngOnInit() {
-    this.nav.hide();
-    this.footer.hide();
-    this.header.hide();
+    
   }
 
   onForgotpassowrd(){

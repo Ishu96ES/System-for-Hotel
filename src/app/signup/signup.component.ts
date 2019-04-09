@@ -13,12 +13,10 @@ import { HeaderService } from '../navigation/header/header.service';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(public nav:NavtabsService,public authService: AuthService,public footer:FooterService,public header:HeaderService) { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
-    this.nav.hide();
-    this.footer.hide();
-    this.header.hide();
+    
   }
 
   backClicked() {

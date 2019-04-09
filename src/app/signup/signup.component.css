@@ -21,6 +21,9 @@
 	height: 100px;
 	width: 100px;
 }
+.home-btn:hover{
+	border: solid 2px #ff9000; 
+}
 .close { 
     position: absolute; 
     right: 35px; 

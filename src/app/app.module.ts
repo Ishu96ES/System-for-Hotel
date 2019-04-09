@@ -83,7 +83,7 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
   ],
-  providers: [AuthService,NavtabsService],
+  providers: [AuthService,NavtabsService,HeaderService],
   bootstrap: [AppComponent],
   entryComponents : [SigninComponent]
 })
