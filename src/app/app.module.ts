@@ -39,8 +39,12 @@ import { Router, NavigationStart } from '@angular/router';
 import { NavtabsService } from './navigation/navtabs/navtabs.service';
 import { HeaderService } from './navigation/header/header.service';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { ToastrModule } from 'ngx-toastr';
 import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.component';
-import { LoginHeaderComponent } from './navigation/login-header/login-header.component';
+import { AdminComponent } from './admin/admin.component';
+import { AddMenuComponent } from './admin/foodmenu/add-menu/add-menu.component';
+import { EditMenuComponent } from './admin/foodmenu/edit-menu/edit-menu.component';
+import { ViewMenuComponent } from './admin/foodmenu/view-menu/view-menu.component';
 
 @NgModule({
   declarations: [
@@ -66,8 +70,13 @@ import { LoginHeaderComponent } from './navigation/login-header/login-header.com
     SignupComponent,
     ForgetpasswordComponent,
     VerifyemailComponent,
+    //admin
     DashboardComponent,
-    LoginHeaderComponent
+    AdminComponent,
+    AdminSidenavComponent, 
+    AddMenuComponent, 
+    EditMenuComponent, 
+    ViewMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -84,6 +93,7 @@ import { LoginHeaderComponent } from './navigation/login-header/login-header.com
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    ToastrModule.forRoot()
   ],
   providers: [AuthService,NavtabsService,HeaderService],
   bootstrap: [AppComponent],

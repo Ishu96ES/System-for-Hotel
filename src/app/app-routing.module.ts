@@ -14,6 +14,10 @@ import { SignupComponent } from './signup/signup.component';
 import { ForgetpasswordComponent } from './user/forgetpassword/forgetpassword.component';
 import { VerifyemailComponent } from './user/verifyemail/verifyemail.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AdminComponent } from './admin/admin.component';
+import { AddMenuComponent } from './admin/foodmenu/add-menu/add-menu.component';
+import { ViewMenuComponent } from './admin/foodmenu/view-menu/view-menu.component';
+import { EditMenuComponent } from './admin/foodmenu/edit-menu/edit-menu.component';
  
 const routes: Routes = [
   {path: 'accomodation', component: AccomodationComponent},
@@ -29,7 +33,14 @@ const routes: Routes = [
   {path: 'dining' , component :DiningComponent},
   {path: 'forgetpassword', component :ForgetpasswordComponent},
   {path: 'verifyemail', component :VerifyemailComponent},
-  {path: 'admin', component :DashboardComponent}
+
+  //admin
+    { path: '', component: AdminComponent},
+    { path: 'admin', component: DashboardComponent },
+    { path: 'add-menu', component: AddMenuComponent },
+    { path: 'view-menu', component: ViewMenuComponent },
+    { path: 'edit-menu/:id', component: EditMenuComponent }
+ 
 ];
 
 @NgModule({

@@ -25,7 +25,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/hotelSystem.scss"
+              "src/hotelSystem.scss",
+              "node_modules/ngx-toastr/toastr.css" 
             ],
             "scripts": [],
             "es5BrowserSupport": true
