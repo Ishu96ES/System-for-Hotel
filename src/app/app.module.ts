@@ -42,7 +42,6 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.component';
 import { LoginHeaderComponent } from './navigation/login-header/login-header.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
