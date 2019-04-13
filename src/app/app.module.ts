@@ -45,6 +45,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { FoodItemComponent } from './food-items/food-item/food-item.component';
 import { AddFoodItemComponent } from './food-items/add-food-item/add-food-item.component';
+import { FoodItemService } from './food-items/food-item.service';
 
 @NgModule({
   declarations: [
@@ -95,7 +96,7 @@ import { AddFoodItemComponent } from './food-items/add-food-item/add-food-item.c
     AngularFireDatabaseModule,
     ToastrModule.forRoot()
   ],
-  providers: [AuthService,NavtabsService,HeaderService],
+  providers: [AuthService,NavtabsService,HeaderService,FoodItemService],
   bootstrap: [AppComponent],
   entryComponents : [SigninComponent]
 })
