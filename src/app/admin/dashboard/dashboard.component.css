@@ -1,7 +1,6 @@
 .logo-container {
     width: 100%;
     
-
 }
 
 .logo {
@@ -12,8 +11,27 @@
 
 .header-container{
     height: 75px;
+    background-color: #0e0923;
+    border-bottom: #ff9000 solid 2px;
 }
 
 .mytab{
     margin-left: 1150px;
+}
+
+mat-nav-list{
+    width: 20%;
+    color: #0e0923;
+    font-size: 22px; 
+    height: 40px;
+    background-color: white;
+}
+
+mat-icon{
+
+}
+
+.link{
+    margin-bottom: 15px;
+    margin-left: 5%;
 }

@@ -42,9 +42,7 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.component';
 import { AdminComponent } from './admin/admin.component';
-import { AddMenuComponent } from './admin/foodmenu/add-menu/add-menu.component';
-import { EditMenuComponent } from './admin/foodmenu/edit-menu/edit-menu.component';
-import { ViewMenuComponent } from './admin/foodmenu/view-menu/view-menu.component';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 @NgModule({
   declarations: [
@@ -73,10 +71,7 @@ import { ViewMenuComponent } from './admin/foodmenu/view-menu/view-menu.componen
     //admin
     DashboardComponent,
     AdminComponent,
-    AdminSidenavComponent, 
-    AddMenuComponent, 
-    EditMenuComponent, 
-    ViewMenuComponent
+    AdminSidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -93,6 +88,7 @@ import { ViewMenuComponent } from './admin/foodmenu/view-menu/view-menu.componen
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    AngularFireDatabaseModule,
     ToastrModule.forRoot()
   ],
   providers: [AuthService,NavtabsService,HeaderService],

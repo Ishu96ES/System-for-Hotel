@@ -1,14 +1,50 @@
-<mat-toolbar  class="header-container" color ="primary"  >
-        <div class="logo-container">
-            <div fxLayout="row" fxLayoutAlign= "center center">
-                <div fxLayout="column" fxLayoutAlign= "center center">
-                    <img class="logo" src="/assets/images/logo.png" >
-                  </div>
-                  <div fxLayout="column" fxLayoutAlign= "right center">
-                    <a class="mytab" >
-                    Log out
-                  </a>
-                </div>
-             </div>
-        </div>
-</mat-toolbar>
+<!DOCTYPE html>
+<html>
+  <header class="header-container">
+    <div class="logo-container">
+      <div fxLayout="column" fxLayoutAlign= "left ">
+          <img class="logo" src="/assets/images/logo.png" >
+      </div>
+</div>
+  </header>
+
+<div id="mySidenav" class="sidenav">
+   <mat-nav-list style="height:80px">
+    <span >
+        <mat-icon style="font-size: 80px;margin-left: 32%;color: orange;">account_circle</mat-icon>
+    </span>
+   </mat-nav-list> 
+  <mat-nav-list  >
+    <span class="link" mat-list-item >
+      <mat-icon>dashboard</mat-icon>
+      <span>  Dashboard</span>
+  </span>
+  </mat-nav-list>
+  <mat-nav-list  >
+    <span class="link" mat-list-item  routerLink = "/add-menu" >
+      <mat-icon>receipt</mat-icon>
+      <span>  Food Menu</span>
+  </span>
+  </mat-nav-list>
+  <mat-nav-list  >
+      <span class="link" mat-list-item  routerLink = "/add-menu" >
+        <mat-icon>receipt</mat-icon>
+        <span>  Forum</span>
+    </span>
+    </mat-nav-list>
+    <mat-nav-list  >
+        <span class="link" mat-list-item  routerLink = "/add-menu" >
+          <mat-icon>receipt</mat-icon>
+          <span>  Offers</span>
+      </span>
+      </mat-nav-list>
+      <mat-nav-list  >
+          <span class="link" mat-list-item  routerLink = "/add-menu" >
+            <mat-icon>receipt</mat-icon>
+            <span>  Resources</span>
+        </span>
+        </mat-nav-list>
+
+  </div>
+
+</html>
