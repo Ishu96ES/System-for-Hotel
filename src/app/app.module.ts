@@ -46,6 +46,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { FoodItemComponent } from './food-items/food-item/food-item.component';
 import { AddFoodItemComponent } from './food-items/add-food-item/add-food-item.component';
 import { FoodItemService } from './food-items/food-item.service';
+import { ListFoodItemComponent } from './food-items/list-food-item/list-food-item.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { FoodItemService } from './food-items/food-item.service';
     AdminComponent,
     AdminSidenavComponent,
     FoodItemComponent,
-    AddFoodItemComponent
+    AddFoodItemComponent,
+    ListFoodItemComponent
   ],
   imports: [
     BrowserModule,
