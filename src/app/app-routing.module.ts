@@ -15,6 +15,7 @@ import { ForgetpasswordComponent } from './user/forgetpassword/forgetpassword.co
 import { VerifyemailComponent } from './user/verifyemail/verifyemail.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AdminComponent } from './admin/admin.component';
+import { FoodItemComponent } from './food-items/food-item/food-item.component';
 
  
 const routes: Routes = [
@@ -31,6 +32,8 @@ const routes: Routes = [
   {path: 'dining' , component :DiningComponent},
   {path: 'forgetpassword', component :ForgetpasswordComponent},
   {path: 'verifyemail', component :VerifyemailComponent},
+
+  {path: 'foods' , component: FoodItemComponent},
 
   //admin
     { path: '', component: AdminComponent},

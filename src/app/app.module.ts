@@ -43,6 +43,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.component';
 import { AdminComponent } from './admin/admin.component';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { FoodItemComponent } from './food-items/food-item/food-item.component';
+import { AddFoodItemComponent } from './food-items/add-food-item/add-food-item.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     //admin
     DashboardComponent,
     AdminComponent,
-    AdminSidenavComponent
+    AdminSidenavComponent,
+    FoodItemComponent,
+    AddFoodItemComponent
   ],
   imports: [
     BrowserModule,
