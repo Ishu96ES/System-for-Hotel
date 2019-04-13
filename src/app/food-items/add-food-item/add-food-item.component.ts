@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FoodItemService } from '../food-item.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-add-food-item',
@@ -12,7 +13,8 @@ export class AddFoodItemComponent implements OnInit {
 
   constructor(
     private service:FoodItemService,
-    private firestore: AngularFirestore
+    private firestore: AngularFirestore,
+    private toastr: ToastrService
     ) { }
 
   ngOnInit() {
@@ -38,6 +40,8 @@ export class AddFoodItemComponent implements OnInit {
     else
       this.firestore.doc('/' + form.value.id).update(data);
     this.resetForm(form);
+    this.toastr.success('Submitted successfully', 'Menu.Add');
+
   }
 
 }

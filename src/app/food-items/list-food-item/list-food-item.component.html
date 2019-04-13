@@ -1,15 +1,18 @@
 <table class="table table-hover">
-    <thead class="thead-dark">
-      <th>Reg. Number</th>
-      <th>Name</th>
-      <th>Entered Date</th>
-      <th>Year</th>
-      <th>Mobile</th>
-      <th>Address</th>
-      <th>Fee</th>
-      <th>&nbsp;</th>
-      <th>&nbsp;</th>
-    </thead>
- 
-  
-  </table>
+  <thead class="thead-dark">
+    <th>Name</th>
+    <th>Type</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let fitem of list">
+      <td >{{fitem.itemName}}</td>
+      <td >{{fitem.itemType}}</td>
+      <td >{{fitem.price}}</td>
+      <td >{{fitem.description}}</td>
+      <td><a class="btn-text-danger" (click)="onDelete(fitem.id)"><i class="fa fa-trash"></i></a></td>
+    </tr>
+  </tbody>
+</table>

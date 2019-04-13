@@ -1,7 +1,7 @@
 <div class="container">
 <h1 class="display-4" > Food Menu Items</h1>
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
-  
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
   <div class="form-group">
     <input name="itemName" #itemName="ngModel" [(ngModel)]="service.formData.itemName" class="form-control" placeholder="Menu name" required>
     <div *ngIf="itemName.invalid && itemName.touched" class="validation-error" style="margin-left:30%;">This field is required.</div>
