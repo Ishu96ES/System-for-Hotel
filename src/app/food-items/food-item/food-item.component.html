@@ -54,11 +54,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px;margin-top:43px;">
   <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6"><app-add-food-item></app-add-food-item></div>
+    <div class="col-md-3"><button (click)="onAdd()" class="add"mat-icon-button><mat-icon>add</mat-icon></button></div>
+    <div class="col-md-6"></div>
     <div class="col-md-3"></div>
   </div>
-  <hr style="border: 2px dashed orangered;">
+  <hr style="border: 0.5px dashed #ff9000;">
  
   <app-list-food-item></app-list-food-item>
   

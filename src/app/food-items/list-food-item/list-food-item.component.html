@@ -1,18 +1,18 @@
-<table class="table table-hover">
-  <thead class="thead-dark">
-    <th>Name</th>
-    <th>Type</th>
-    <th>Price</th>
-    <th>Description</th>
-    <th>Action</th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let fitem of list">
-      <td >{{fitem.itemName}}</td>
-      <td >{{fitem.itemType}}</td>
-      <td >{{fitem.price}}</td>
-      <td >{{fitem.description}}</td>
-      <td><a class="btn-text-danger" (click)="onDelete(fitem.id)"><i class="fa fa-trash"></i></a></td>
-    </tr>
-  </tbody>
-</table>
+<mat-card *ngFor="let fitem of list; let i = index;" class="add-food">
+    <mat-card-header>
+      <mat-card-subtitle><h3>{{i+1}}.{{fitem.itemName}}</h3></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <dl>
+        <dt>{{fitem.itemType}} : </dt>
+        <dt>Price: {{fitem.price}}</dt>
+        <dt>Description:{{fitem.description}}</dt>
+        <br>
+        <dt style="margin-left:70%;">                  
+          <a class="mat-icon-button" (click)="onEdit(fitem)"> <mat-icon style="color:#5bc0de;">edit</mat-icon></a>
+          <a class="mat-icon-button" (click)="onDelete(fitem.id)"><mat-icon style="color:red;">delete</mat-icon>  </a>
+        </dt>
+          </dl>
+    </mat-card-content>
+  
+  </mat-card>

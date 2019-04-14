@@ -4,3 +4,8 @@
     background-color: grey;
 }
 
+.add-food {
+    width: calc(100% - 600px);
+    height: calc(100% - 70px);
+    border: #ff9000;
+  }

@@ -28,8 +28,23 @@ export class ListFoodItemComponent implements OnInit {
       });
     });
   }
-  onEdit(fitem:FoodItem) {
-    this.service.formData = Object.assign({}, fitem);
+  
+  onEdit(fitem) {
+    fitem.isEdit = true;
+    fitem.EditName = fitem.itemName;
+    fitem.EditType = fitem.itemType;
+    fitem.EditPrice = fitem.price;
+    fitem.EditDescription = fitem.description;
+  }
+ 
+  onUpdate(data) {
+    let fitem = {};
+    fitem['itemName'] = data.EditName;
+    fitem['itemType'] = data.EditType;
+    fitem['price'] = data.EditPrice;
+    fitem['description'] = data.EditDescription;
+    this.service.updateItems(data.id, fitem);
+    data.isEdit = false;
   }
  
   onDelete(id: string) {

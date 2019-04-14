@@ -3,4 +3,5 @@ export class FoodItem {
     itemType: string;
     description: string;
     price: Number;
+
 }

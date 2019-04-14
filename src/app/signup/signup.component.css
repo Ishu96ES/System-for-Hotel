@@ -45,7 +45,7 @@
 	height: 375px;
 	position: inherit;
 	margin-top: 25px;
-	margin-left: 445px;
+	margin-left: 32%;
 	border-radius: 8px;
 
 }
@@ -72,8 +72,8 @@
 }
 .signupfield-prepend{
     margin-bottom:10px;
-    margin-left: 22px;
-	width:100%;
+    margin-left: 9%;
+	width:90%;
 }
 
 .signupform-addon{

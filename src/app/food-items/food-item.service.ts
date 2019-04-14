@@ -13,4 +13,8 @@ export class FoodItemService {
   getItems() {
     return this.firestore.collection('foods').snapshotChanges();
   }
+
+  updateItems(id,data){
+    this.firestore.doc('foods/' + id).update(data);
+  }
 }

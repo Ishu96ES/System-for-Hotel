@@ -100,7 +100,7 @@ import { ListFoodItemComponent } from './food-items/list-food-item/list-food-ite
   ],
   providers: [AuthService,NavtabsService,HeaderService,FoodItemService],
   bootstrap: [AppComponent],
-  entryComponents : [SigninComponent]
+  entryComponents : [SigninComponent,AddFoodItemComponent]
 })
 export class AppModule { 
   showHead: boolean = false;
