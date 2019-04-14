@@ -1,18 +1,24 @@
-<mat-card *ngFor="let fitem of list; let i = index;" class="add-food">
+
+<div fxLayout="row wrap">
+<mat-card fxFlex="33.33" *ngFor="let fitem of list|paginate: { itemsPerPage: 03, currentPage: p }; let i = index;" class="add-food">
     <mat-card-header>
       <mat-card-subtitle><h3>{{i+1}}.{{fitem.itemName}}</h3></mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
+        <img class="align-self-start mr-5 "src="{{(fitem.photoURL) ? fitem.photoURL : 'downloadURL'}}"/>
       <dl>
         <dt>{{fitem.itemType}} : </dt>
         <dt>Price: {{fitem.price}}</dt>
-        <dt>Description:{{fitem.description}}</dt>
+        <dt>Description:</dt>
+        <dt>{{fitem.description}}</dt>
         <br>
         <dt style="margin-left:70%;">                  
-          <a class="mat-icon-button" (click)="onEdit(fitem)"> <mat-icon style="color:#5bc0de;">edit</mat-icon></a>
-          <a class="mat-icon-button" (click)="onDelete(fitem.id)"><mat-icon style="color:red;">delete</mat-icon>  </a>
+          <a mat-icon-button (click)="onEdit(fitem)"> <mat-icon style="color:#ff9000;background-color: white;">edit</mat-icon></a>
+          <a mat-icon-button (click)="onDelete(fitem.id)"><mat-icon style="color:#ff9000;background-color: white;">delete</mat-icon>  </a>
         </dt>
           </dl>
     </mat-card-content>
   
   </mat-card>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

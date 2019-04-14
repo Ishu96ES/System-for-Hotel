@@ -33,7 +33,7 @@ import {
         MatCardModule,
         MatFormFieldModule,
         MatInputModule,
-        MatCheckboxModule,
+        MatCheckboxModule
     ],
     exports:[
         MatBadgeModule,

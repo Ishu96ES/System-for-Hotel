@@ -3,6 +3,8 @@ import { FoodItem } from '../food-item.model';
 import { FoodItemService } from '../food-item.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ToastrService } from 'ngx-toastr';
+import { firestore } from 'firebase';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-list-food-item',
@@ -18,6 +20,7 @@ export class ListFoodItemComponent implements OnInit {
     private toastr: ToastrService
   ) { }
 
+  p: number = 1;
   ngOnInit() {
     this.service.getItems().subscribe(actionArray => {
       this.list = actionArray.map(item => {
@@ -28,6 +31,23 @@ export class ListFoodItemComponent implements OnInit {
       });
     });
   }
+  showimage() {
+
+
+
+    var storageRef = firebase.storage().ref();
+    var spaceRef = storageRef.child('meuns/1.jpg');
+    storageRef.child('menus/1.jpg').getDownloadURL().then(function(url) {
+        var test = url;
+        alert(url);
+        document.querySelector('img').src = test;
+
+    }).catch(function(error) {
+
+    });
+
+
+}
   
   onEdit(fitem) {
     fitem.isEdit = true;

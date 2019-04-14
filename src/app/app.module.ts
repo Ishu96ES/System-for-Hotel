@@ -7,6 +7,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -96,7 +98,8 @@ import { ListFoodItemComponent } from './food-items/list-food-item/list-food-ite
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireDatabaseModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgxPaginationModule
   ],
   providers: [AuthService,NavtabsService,HeaderService,FoodItemService],
   bootstrap: [AppComponent],

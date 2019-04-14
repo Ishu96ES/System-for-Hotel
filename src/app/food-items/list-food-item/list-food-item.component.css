@@ -5,7 +5,12 @@
 }
 
 .add-food {
-    width: calc(100% - 600px);
-    height: calc(100% - 70px);
-    border: #ff9000;
+    border-radius:0;
+    background-color:  white;
+    color:#0e0923;
+    
   }
+
+.row wrap{
+    padding: 3px 3px 3px 3px;
+}

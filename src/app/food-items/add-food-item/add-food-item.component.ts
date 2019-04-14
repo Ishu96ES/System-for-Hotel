@@ -3,6 +3,8 @@ import { FoodItemService } from '../food-item.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { element } from '@angular/core/src/render3';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-add-food-item',
@@ -31,6 +33,26 @@ export class AddFoodItemComponent implements OnInit {
       price : undefined
     }
   }
+
+  onFileUpload(event){
+    const file = event.target.files[0];
+    var filename = file.itemName;
+    var storageRef = firebase.storage().ref('/menus'+ filename);
+    var uploadTask = storageRef.put(file);
+
+  uploadTask.on('state_changed', function(snapshot){
+
+  }, function(error) {
+  // Handle unsuccessful uploads
+  }, function() {
+  // Handle successful uploads on complete
+  // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+    var downloadURL = uploadTask.snapshot.downloadURL;
+    console.log(downloadURL);
+  });
+
+  
+    }
  
   onSubmit(form: NgForm) {
     let data = Object.assign({}, form.value);
