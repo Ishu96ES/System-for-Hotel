@@ -69,12 +69,13 @@ export class ListFoodItemComponent implements OnInit {
     fitem['description'] = data.EditDescription;
     this.service.updateItems(data.id, fitem);
     data.isEdit = false;
+    this.toastr.success('Updated successfully');
   }
  
   onDelete(id: string) {
     if (confirm("Are you sure to delete this record?")) {
       this.firestore.doc('foods/' + id).delete();
-      this.toastr.warning('Deleted successfully','menu.add');
+      this.toastr.warning('Deleted successfully');
     }
   }
 

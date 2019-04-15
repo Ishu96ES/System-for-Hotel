@@ -1,24 +1,32 @@
+
 <div class="container-add-food">
-<h1 class="display-4" >Food Menu</h1>
+<h1 class="display-4" >Food Menu</h1> 
+<button (click)="onClose()"id = "x">
+  X
+</button>
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
   <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
-  <div class="form-group">
-    <input name="itemName" #itemName="ngModel" [(ngModel)]="service.formData.itemName" class="form-control" placeholder="Menu name" required>
-    <div *ngIf="itemName.invalid && itemName.touched" class="validation-error" style="margin-left:30%;">This field is required.</div>
+  <div class="form-group" >
+    <span class="form-add-menu-icon"><mat-icon>book</mat-icon></span>
+    <input name="itemName" #itemName="ngModel" [(ngModel)]="service.formData.itemName" class="addmenuformfield" form-control placeholder="Menu name" required>
+    <div *ngIf="itemName.invalid && itemName.touched" class="validation-error">This field is required.</div>
   </div>
-  <div class="form-group">   
-    <input name="itemType" #itemType="ngModel" [(ngModel)]="service.formData.itemType" class="form-control" placeholder="Type">
+  <div class="form-group">  
+      <span class="form-add-menu-icon"><mat-icon>subject</mat-icon></span> 
+    <input name="itemType" #itemType="ngModel" [(ngModel)]="service.formData.itemType" class="addmenuformfield" form-control placeholder="Type">
   </div>
     <div class="form-group  ">
-      <input name="price" #mobile="ngModel" [(ngModel)]="service.formData.price" class="form-control" placeholder="price">
+        <span class="form-add-menu-icon"><mat-icon>monetization_on</mat-icon></span>
+      <input name="price" #mobile="ngModel" [(ngModel)]="service.formData.price" class="addmenuformfield" form-control placeholder="price">
     </div>
     <div class="form-group ">
-        <textarea name="description" style="height:60px;" #descriptio="ngModel" [(ngModel)]="service.formData.description" class="form-control" placeholder="Description"></textarea>
+        <span class="form-add-menu-icon"><mat-icon>description</mat-icon></span>
+        <textarea name="description" style="height:60px;" #descriptio="ngModel" [(ngModel)]="service.formData.description" class="addmenuformfield" form-control placeholder="Description"></textarea>
       </div>
   
-  <div class="form-group">
-    <button type="submit" [disabled]="form.invalid" class="btn">Add</button>
-    <button  class="btn">Cancel</button>
+  <div class="form-group" fxflex="row">
+    <button type="submit" [disabled]="form.invalid" class="btn" >Add</button>
+
   </div>
  
 </form>

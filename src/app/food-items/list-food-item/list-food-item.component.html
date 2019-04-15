@@ -6,7 +6,7 @@
       <dl>
         <dt>{{fitem.itemName}}</dt>
         <dt>{{fitem.itemType}} : </dt>
-        <dt>Price: {{fitem.price}}</dt>
+        <dt>Price: Rs.{{fitem.price}}</dt>
         <dt>Description:</dt>
         <dt>{{fitem.description}}</dt>
         <br>
@@ -22,7 +22,8 @@
         <dl>
           <dt><input type="text" class="form-control" [(ngModel)]="fitem.itemName" placeholder="{{fitem.itemName}}"></dt>
           <dt><input type="text" class="form-control" [(ngModel)]="fitem.itemType" placeholder="{{fitem.itemType}}"> : </dt>
-          <dt>Price: <input type="text" class="form-control" [(ngModel)]="fitem.price" placeholder="{{fitem.price}}"></dt>
+          <dt>Price: Rs.</dt>
+          <dt><input type="text" class="form-control" [(ngModel)]="fitem.price" placeholder="{{fitem.price}}"></dt>
           <dt>Description:</dt>
           <dt><input type="text" class="form-control" [(ngModel)]="fitem.description" placeholder="{{fitem.description}}"></dt>
           <br>

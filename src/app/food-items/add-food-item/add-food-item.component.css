@@ -1,13 +1,14 @@
 
 input.ng-touched.ng-invalid{
-    border-color: #ff9000;
+    border-color: red;
 }
  
 div.validation-error{
     width: 50%;
     margin-top: .25rem;
     font-size: 80%;
-    color: #ff9000;
+    color: red;
+    margin-left: 10%;
 }
  
 /* for table row hover - in employee-list component */
@@ -18,27 +19,70 @@ table.table-hover tbody tr:hover{
 .display-4{
     font-weight:bolder;
     margin-left: 30%;
-    color: #ff9000;
+    color: #0e0923;
     margin-bottom: 5%;
     font-weight: bolder;
 }
 
+.container-add-food{
+   
+    width: 100%;
+  /*border-radius: 25px;*/
+    border: 2px solid #fafafa;
+    padding: 20px 20px 20px 20px;
+    margin: 0px 0px 0px 0px;
+    overflow: visible;
+    box-shadow: 5px 5px 2px #888776;
+    position: relative;
+}
 
-.form-control{
+#x {
+    position: absolute;
+    background: white;
+    color: #ff9000;
+    top: -10px;
+    right: -10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#x:hover{
+    color: #0e0923;
+}
+
+.form-add-menu-icon{
+	color:#0e0923; 
+	float:left;
+	padding:10.5px;
+	width:10%;
+	height: 18px;
+	background: transparent;
+    text-align:center;
+    margin-left: 5%;
+    
+
+}
+.addmenuformfield {
+	color:#0e0923; 
+	padding:10.5px;
+	display:block;
+	font-family: 'Lato',Arial,sans-serif;
+    font-size:14px;
     width: 80%;
     height: 35px;
     margin-left: 10%;
-    margin-bottom: 0.5%;
+    margin-bottom: 1%;
     border-radius: 5px;
 }
+
 
 .btn{
     background-color: orange;
     color: white;
-    font-weight: bolder;
+    font-weight: bold;
     border-radius: 5px;
-    margin-left: 45%;
-    width: 16%;
+    width: 20%;
     height: 35px;
-    margin-top: 3%;
+    margin-right: 5%;
+    margin-left: 42%;
+    margin-bottom:5%;
 }

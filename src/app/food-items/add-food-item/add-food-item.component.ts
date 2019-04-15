@@ -5,6 +5,7 @@ import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { element } from '@angular/core/src/render3';
 import * as firebase from 'firebase';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-add-food-item',
@@ -12,11 +13,13 @@ import * as firebase from 'firebase';
   styleUrls: ['./add-food-item.component.css']
 })
 export class AddFoodItemComponent implements OnInit {
+  
 
   constructor(
     private service:FoodItemService,
     private firestore: AngularFirestore,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    public dialogRef : MatDialogRef<AddFoodItemComponent>
     ) { }
 
   ngOnInit() {
@@ -62,8 +65,13 @@ export class AddFoodItemComponent implements OnInit {
     else
       this.firestore.doc('/' + form.value.id).update(data);
     this.resetForm(form);
-    this.toastr.success('Submitted successfully', 'Menu.Add');
+    this.onClose();
+    this.toastr.success('Submitted successfully');
 
   }
+
+  onClose(){
+    this.dialogRef.close();
+    }
 
 }
