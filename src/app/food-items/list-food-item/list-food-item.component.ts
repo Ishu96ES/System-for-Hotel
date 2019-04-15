@@ -13,7 +13,7 @@ import * as firebase from 'firebase';
 })
 export class ListFoodItemComponent implements OnInit {
 
-  list: FoodItem[];
+  list: any;
   constructor(
     private service:FoodItemService,
     private firestore:AngularFirestore,
@@ -23,18 +23,22 @@ export class ListFoodItemComponent implements OnInit {
   p: number = 1;
   ngOnInit() {
     this.service.getItems().subscribe(actionArray => {
-      this.list = actionArray.map(item => {
+      
+      this.list = actionArray.map(e => {
         return {
-          id: item.payload.doc.id,
-          ...item.payload.doc.data(),
-        } as unknown as FoodItem;
-      });
+          id: e.payload.doc.id,
+          isEdit: false,
+          itemName: e.payload.doc.data()['itemName'],
+          itemType: e.payload.doc.data()['itemType'],
+          price: e.payload.doc.data()['price'],
+          description: e.payload.doc.data()['description']
+        };
+      })
+      console.log(this.list);
     });
   }
   showimage() {
-
-
-
+    
     var storageRef = firebase.storage().ref();
     var spaceRef = storageRef.child('meuns/1.jpg');
     storageRef.child('menus/1.jpg').getDownloadURL().then(function(url) {

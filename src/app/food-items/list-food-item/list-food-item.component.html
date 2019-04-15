@@ -1,12 +1,10 @@
 
 <div fxLayout="row wrap">
-<mat-card fxFlex="33.33" *ngFor="let fitem of list|paginate: { itemsPerPage: 03, currentPage: p }; let i = index;" class="add-food">
-    <mat-card-header>
-      <mat-card-subtitle><h3>{{i+1}}.{{fitem.itemName}}</h3></mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-        <img class="align-self-start mr-5 "src="{{(fitem.photoURL) ? fitem.photoURL : 'downloadURL'}}"/>
+<mat-card fxFlex="33.33" *ngFor="let fitem of list|paginate: { itemsPerPage: 03, currentPage: p };" class="add-food">
+
+    <mat-card-content *ngIf="!fitem.isEdit; else elseBlock">
       <dl>
+        <dt>{{fitem.itemName}}</dt>
         <dt>{{fitem.itemType}} : </dt>
         <dt>Price: {{fitem.price}}</dt>
         <dt>Description:</dt>
@@ -18,7 +16,24 @@
         </dt>
           </dl>
     </mat-card-content>
-  
+    <ng-template #elseBlock>
+      <mat-card-content>
+        <div class="form-group">
+        <dl>
+          <dt><input type="text" class="form-control" [(ngModel)]="fitem.itemName" placeholder="{{fitem.itemName}}"></dt>
+          <dt><input type="text" class="form-control" [(ngModel)]="fitem.itemType" placeholder="{{fitem.itemType}}"> : </dt>
+          <dt>Price: <input type="text" class="form-control" [(ngModel)]="fitem.price" placeholder="{{fitem.price}}"></dt>
+          <dt>Description:</dt>
+          <dt><input type="text" class="form-control" [(ngModel)]="fitem.description" placeholder="{{fitem.description}}"></dt>
+          <br>
+          <dt style="margin-left:70%;">                  
+            <a mat-icon-button (click)="fitem.isEdit = false"> <mat-icon style="color:#ff9000;background-color: white;">clear</mat-icon></a>
+            <a mat-icon-button (click)="onUpdate(fitem)"><mat-icon style="color:#ff9000;background-color: white;">save</mat-icon>  </a>
+          </dt>
+          </dl>
+          </div>
+      </mat-card-content>
+    </ng-template>
   </mat-card>
   <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>

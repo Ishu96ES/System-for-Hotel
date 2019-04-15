@@ -1,9 +1,19 @@
 .add{
-    background-color: #5bc0de;
-    font-size: 25px;
-    font-weight: bold;
+    background-color: #ff9000;
     color: white;
-    background-size: 35%;
-    text-size-adjust: 35%;
-    margin-left: 90%;
+    margin-left: 70%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+.logo {
+    width: 100px;
+    height: 75px;
+}
+
+.food-subhead{
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left:4%;
+    color: #ff9000;
+    font-weight: bold;
 }
