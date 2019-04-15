@@ -1,6 +1,6 @@
 
 <div fxLayout="row wrap">
-<mat-card fxFlex="33.33" *ngFor="let fitem of list|paginate: { itemsPerPage: 03, currentPage: p };" class="add-food">
+<mat-card fxFlex="33.33" *ngFor="let fitem of list|paginate: { itemsPerPage: 12, currentPage: p };" class="add-food">
 
     <mat-card-content *ngIf="!fitem.isEdit; else elseBlock">
       <dl>
@@ -22,7 +22,7 @@
         <dl>
           <dt><input type="text" class="form-control" [(ngModel)]="fitem.itemName" placeholder="{{fitem.itemName}}"></dt>
           <dt><input type="text" class="form-control" [(ngModel)]="fitem.itemType" placeholder="{{fitem.itemType}}"> : </dt>
-          <dt>Price: Rs.</dt>
+          <dt>Price: </dt>
           <dt><input type="text" class="form-control" [(ngModel)]="fitem.price" placeholder="{{fitem.price}}"></dt>
           <dt>Description:</dt>
           <dt><input type="text" class="form-control" [(ngModel)]="fitem.description" placeholder="{{fitem.description}}"></dt>

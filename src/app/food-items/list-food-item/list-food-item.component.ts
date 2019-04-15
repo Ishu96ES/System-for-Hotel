@@ -13,7 +13,7 @@ import * as firebase from 'firebase';
 })
 export class ListFoodItemComponent implements OnInit {
 
-  list: any;
+  list: FoodItem[];
   constructor(
     private service:FoodItemService,
     private firestore:AngularFirestore,

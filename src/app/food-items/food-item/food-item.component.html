@@ -21,7 +21,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <div class="w3-col s4">
       <img src="/assets/images/admin.png" class="w3-circle w3-margin-right" style="width:46px">
     </div>
-    <div class="w3-col s8 w3-bar">
+    <div class="w3-col s8 w3-bar"style="color:#0e0923;">
       <span>Welcome, <strong>Admin</strong></span><br>
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
@@ -30,12 +30,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div>
   <hr>
   <div class="w3-container">
-    <h5>Dashboard</h5>
+    <h5>Food Menu</h5>
   </div>
   <div class="w3-bar-block">
-    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-    <a  [routerLink]="'/admin'"class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Dashboard</a>
-    <a [routerLink]="'/foods'" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-users fa-fw"></i>  Food Menu</a>
+    <a  [routerLink]="'/admin'"class="w3-bar-item w3-button w3-padding "><span><mat-icon>dashboard</mat-icon> </span> Dashboard</a>
+    <a [routerLink]="'/foods'" class="w3-bar-item w3-button w3-padding" ><span><mat-icon>book</mat-icon> </span> Food Menu</a>
    </div>
 </nav>
 
@@ -46,7 +45,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px;margin-top:50px;">
   <div class="row">
-    <div class="col-md-3" fxLayout="row"><h2 class="food-subhead">Food Menu</h2><button (click)="onAdd()" class="add"mat-icon-button><mat-icon>add</mat-icon></button></div>
+    <div class="col-md-3" fxLayout="row"><h2 class="food-subhead">Food Menu</h2>
+      <button (click)="onAdd()" class="add"mat-icon-button><mat-icon>add</mat-icon></button></div>
     <div class="col-md-6"></div>
     <div class="col-md-3"></div>
   </div>
